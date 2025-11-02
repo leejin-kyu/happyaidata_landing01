@@ -1,0 +1,13 @@
+# 해피AI - AI 기반 빅데이터 분석 전문 서비스 (기관 전용)
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://www.happyaidata.kr/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

@@ -3,6 +3,7 @@
 import { ArrowRight, Sparkles, Award, Users } from 'lucide-react'
 import { useState } from 'react'
 import ContactModal from './ContactModal'
+import { trackClick } from '@/hooks/useAnalytics'
 
 export default function HeroSection() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
@@ -26,6 +27,7 @@ export default function HeroSection() {
             href="https://kmong.com/gig/345782"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackClick('badgeClicks')}
             className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg mb-8 animate-fade-in hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
           >
             <Award className="w-5 h-5 text-purple-600" />
@@ -34,66 +36,71 @@ export default function HeroSection() {
             </span>
           </a>
 
+          {/* Problem Statement - 문제 제기 */}
+          <div className="mb-8 max-w-3xl mx-auto animate-slide-up">
+            <p className="text-lg sm:text-xl text-gray-600 mb-4 leading-relaxed">
+              <span className="text-red-600 font-bold">"연구 프로젝트에 데이터 분석이 필요한데, 어디서부터 시작해야 할지 막막합니다."</span><br />
+              <span className="text-red-600 font-bold">"정책 평가를 위한 여론 분석, AI로 가능할까요?"</span><br />
+              <span className="text-red-600 font-bold">"비정형 텍스트 데이터 분석, 내부 인력만으로는 한계가 있습니다."</span>
+            </p>
+          </div>
+
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up">
-            <span className="block text-gray-900 mb-2">AI 기반 빅데이터 분석의</span>
-            <span className="block gradient-text">새로운 기준, 해피AI</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up animation-delay-200">
+            <span className="block text-gray-900 mb-2">AI 기반 빅데이터 분석으로</span>
+            <span className="block gradient-text">연구의 깊이를 더합니다</span>
           </h1>
 
-          {/* Subheading */}
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto animate-slide-up animation-delay-200">
-            <span className="font-bold text-purple-600">공공기관 · 연구기관 · 대학 · 기업</span>을 위한
+          {/* Empathy & Solution - 공감 + 해결방식 */}
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto animate-slide-up animation-delay-400">
+            정책 분석부터 학술 연구까지 <span className="font-bold text-purple-600">AI LLM 기반 전문 분석 서비스</span>
           </p>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-slide-up animation-delay-400">
-            AI LLM 기반 전문 빅데이터 분석 및 연구지원 서비스
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-slide-up animation-delay-500">
+            과학기술정책연구원·한국교육과정평가원·삼성전자 등 300건 이상 프로젝트 실적
           </p>
 
-          {/* Special Offer Box */}
-          <div className="mb-8 max-w-2xl mx-auto animate-slide-up animation-delay-500">
-            <div className="bg-gradient-to-r from-yellow-50 via-orange-50 to-red-50 border-2 border-orange-200 rounded-2xl p-6 shadow-lg">
+          {/* Value Proposition */}
+          <div className="mb-8 max-w-2xl mx-auto animate-slide-up animation-delay-600">
+            <div className="bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 border-2 border-purple-200 rounded-2xl p-6 shadow-lg">
               <p className="text-base sm:text-lg font-semibold text-gray-800 leading-relaxed">
-                🎁 지금 무료 상담을 예약하시면<br />
-                <span className="text-orange-600">기관 데이터로 간단한 샘플 분석 리포트 + 1시간 컨설팅</span>을 제공합니다.
+                <span className="text-purple-600 text-xl block mb-2">✓ 단순 결과 제공이 아닌, 직접 배우는 분석</span>
+                검증된 전문가 컨소시엄 팀 → 맞춤형 분석 파이프라인 설계 → 기관 내부 역량 강화까지<br />
+                <span className="text-purple-600">전 과정을 체계적으로 지원합니다</span>
               </p>
             </div>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-4 justify-center items-center mb-12 animate-slide-up animation-delay-600">
-            {/* Primary Buttons Row */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3PgNY-n-AQ1BKdNnDRqOxd3NOcpY4Uy9ADRMV-X6c_rdscaRcSj0meSls4n89Hpb1HuK4yynWd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Google Meet 무료 상담 예약
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-
-              <button
-                onClick={() => setIsContactModalOpen(true)}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/90 backdrop-blur-sm text-gray-700 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-purple-200"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                이메일 문의
-              </button>
-            </div>
-
-            {/* Services Link */}
+            {/* Main CTA - 서비스 문의하기 (강조) */}
             <a
-              href="#services"
-              className="px-8 py-3 bg-white/80 text-gray-800 rounded-full font-semibold text-base shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 border border-gray-300"
+              href="https://kmong.com/gig/345782"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackClick('serviceClicks')}
+              className="group px-12 py-5 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-bold text-xl shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-300 flex items-center gap-3"
             >
-              서비스 둘러보기
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              서비스 문의하기
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </a>
+
+            {/* Secondary CTA - 이메일 문의 */}
+            <button
+              onClick={() => {
+                trackClick('emailClicks')
+                setIsContactModalOpen(true)
+              }}
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white/90 backdrop-blur-sm text-gray-700 rounded-full font-semibold text-base shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-purple-200"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              이메일 문의
+            </button>
           </div>
 
           {/* Stats */}
@@ -121,26 +128,24 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Disclaimer */}
+          {/* Expected Benefits - 변화 */}
           <div className="mt-12 max-w-3xl mx-auto">
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-600 rounded-r-xl p-6 shadow-md">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-purple-600 rounded-r-xl p-6 shadow-md">
               <div className="space-y-3">
                 <p className="text-sm text-gray-700">
-                  <span className="font-bold text-blue-700 block mb-2">✓ 기관 전용 서비스</span>
-                  공공기관 · 연구기관 · 대학 · 기업 대상 전문 데이터 분석 및 연구지원 서비스
-                  <br />
-                  <span className="text-xs text-gray-600">검증된 전문가 컨소시엄 팀 운영</span>
+                  <span className="font-bold text-purple-700 block mb-2">🏆 실적 및 강점</span>
+                  과학기술정책연구원·한국교육과정평가원·삼성전자 등 300건 이상 프로젝트 수행<br />
+                  AI LLM(ChatGPT·LLaMA·BERT) 기반 최신 분석 기법 적용<br />
+                  검증된 전문가 컨소시엄 팀 운영 · 고품질 결과물 보장제
                 </p>
                 <div className="pt-3 border-t border-gray-200">
                   <p className="text-xs text-gray-600 mb-2">
-                    <span className="font-semibold text-gray-800">※ 서비스 안내</span>
+                    <span className="font-semibold text-gray-800">✓ 기관 맞춤형 분석 파이프라인 설계</span>
                     <br />
-                    개인 논문 컨설팅 · 논문 대필 서비스와 무관함
+                    정책·여론 분석, 학술 텍스트마이닝, LDA·STM·BERTopic 등 고급 분석 기법
                   </p>
                   <p className="text-xs text-gray-500">
-                    <span className="font-semibold">법적 고지 (변호사 자문 완료)</span>
-                    <br />
-                    허위사실 유포 · 비방 · 명예훼손 등은 법적 책임 대상
+                    <span className="font-semibold">※ 본 서비스는 기관 프로젝트 전용이며, 개인 논문 대필·컨설팅과 무관합니다.</span>
                   </p>
                 </div>
               </div>

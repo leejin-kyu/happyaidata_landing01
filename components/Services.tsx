@@ -50,10 +50,10 @@ export default function Services() {
               <span className="text-sm font-semibold text-gray-700">제공 서비스</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              전문적인 <span className="gradient-text">AI 분석 서비스</span>
+              기관 전용 <span className="gradient-text">AI 분석 서비스</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              공공기관, 연구기관, 대학, 기업을 위한 맞춤형 빅데이터 분석 및 교육
+              공공기관·연구기관·대학·기업의 프로젝트를 위한 맞춤형 빅데이터 분석 및 역량 강화 교육
             </p>
           </div>
 

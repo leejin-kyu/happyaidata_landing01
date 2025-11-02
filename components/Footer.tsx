@@ -194,6 +194,15 @@ export default function Footer() {
             <p className="text-gray-500 text-sm">
               © 2025 해피AI. All rights reserved.
             </p>
+
+            {/* Hidden Admin Button */}
+            <a
+              href="/admin"
+              className="inline-block mt-4 text-gray-600 hover:text-gray-400 transition-colors text-xs opacity-10 hover:opacity-30"
+              title="관리자"
+            >
+              •
+            </a>
           </div>
         </div>
       </div>

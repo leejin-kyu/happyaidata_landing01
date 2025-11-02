@@ -34,7 +34,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" className="text-2xl md:text-3xl font-bold">
+            <a href="https://www.happyaidata.kr/" target="_blank" rel="noopener noreferrer" className="text-2xl md:text-3xl font-bold">
               <span className="gradient-text">해피AI</span>
             </a>
           </div>
@@ -51,12 +51,12 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3PgNY-n-AQ1BKdNnDRqOxd3NOcpY4Uy9ADRMV-X6c_rdscaRcSj0meSls4n89Hpb1HuK4yynWd"
+              href="https://kmong.com/gig/345782"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2.5 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200 font-semibold"
             >
-              무료 상담 문의
+              서비스 문의
             </a>
           </nav>
 
@@ -88,13 +88,13 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3PgNY-n-AQ1BKdNnDRqOxd3NOcpY4Uy9ADRMV-X6c_rdscaRcSj0meSls4n89Hpb1HuK4yynWd"
+              href="https://kmong.com/gig/345782"
               target="_blank"
               rel="noopener noreferrer"
               className="block mt-4 px-6 py-3 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full text-center font-semibold"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              무료 상담 문의
+              서비스 문의
             </a>
           </nav>
         )}
