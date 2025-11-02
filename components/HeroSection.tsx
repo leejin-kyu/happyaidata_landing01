@@ -39,9 +39,9 @@ export default function HeroSection() {
           {/* Problem Statement - 문제 제기 */}
           <div className="mb-8 max-w-3xl mx-auto animate-slide-up">
             <p className="text-lg sm:text-xl text-gray-600 mb-4 leading-relaxed">
-              <span className="text-red-600 font-bold">"연구 프로젝트에 데이터 분석이 필요한데, 어디서부터 시작해야 할지 막막합니다."</span><br />
-              <span className="text-red-600 font-bold">"정책 평가를 위한 여론 분석, AI로 가능할까요?"</span><br />
-              <span className="text-red-600 font-bold">"비정형 텍스트 데이터 분석, 내부 인력만으로는 한계가 있습니다."</span>
+              <span className="text-red-600 font-bold">&ldquo;연구 프로젝트에 데이터 분석이 필요한데, 어디서부터 시작해야 할지 막막합니다.&rdquo;</span><br />
+              <span className="text-red-600 font-bold">&ldquo;정책 평가를 위한 여론 분석, AI로 가능할까요?&rdquo;</span><br />
+              <span className="text-red-600 font-bold">&ldquo;비정형 텍스트 데이터 분석, 내부 인력만으로는 한계가 있습니다.&rdquo;</span>
             </p>
           </div>
 
